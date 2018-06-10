@@ -151,6 +151,12 @@ html{
 .introduce5{
 	width: 80%;
 	height: 50%;
-	overflow: hidden;
-	text-overflow: clip;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;/*超出部分出现省略号失败。。。可以滚动*/
+    overflow: auto;
+}
+
+.introduce5::-webkit-scrollbar{
+	display: none;
 }
