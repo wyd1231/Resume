@@ -10,6 +10,7 @@ html{
 /*
 #f3da25 qianhuang
 #f5ae1b shenhuang
+基本信息教育背景职业技能奖项证书校园经历自我评价
 */
 
 @media screen and (max-width: 720px){
@@ -67,6 +68,8 @@ html{
 
 .box1 h1{
 	position: absolute;
+	font-family:'PangMenZhengDao128d20f84c1d2b2';
+	font-weight: lighter;
 	top: 0;
 	width: 100%;
 	color: white;
@@ -153,7 +156,7 @@ html{
 	height: 50%;
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 3;/*超出部分出现省略号失败。。。可以滚动*/
+	-webkit-line-clamp: 3;/*超出部分出现省略号失败,省略号的位置在“活动。。。”这里，可以滚动*/
     overflow: auto;
 }
 
