@@ -45,6 +45,7 @@ html{
 .box1{
 	background-color: #f3da25;
 	transition: all 1s;
+	-webkit-transition: all 1s;
 }
 
 .box1 img{
@@ -55,7 +56,9 @@ html{
 	opacity: 0;
 	z-index: 10;
 	transform: scale(0);
+	-webkit-transform: scale(0);
 	transition: all 1s;
+	-webkit-transition: all 1s;
 }
 
 .box1 .xie{
@@ -63,7 +66,9 @@ html{
 	height: 100px;
 	background-color: purple;
 	transform: translate(0,-100px);
+	-webkit-transform: translate(0,-100px);
 	transition: all 1s;
+	-webkit-transition: all 1s;
 }
 
 .box1 h1{
@@ -77,6 +82,7 @@ html{
 	font-size: 3rem;
 	line-height: 22rem;
 	transition: all 1s;
+	-webkit-transition: all 1s;
 }
 
 .box1 .introduce{
@@ -84,23 +90,29 @@ html{
 	bottom: 1rem;
 	right: 2rem;
 	transform: scale(0.5,0.5);
+	-webkit-transform: scale(0.5,0.5);
 	opacity: 0;
 	transition: all 1s;
+	-webkit-transition: all 1s;
 }
 
 .box1:hover{
 	background-color: white;
 	transition: all 1s;
+	-webkit-transition: all 1s;
 }
 
 @keyframes zhuan{
 	0%{
+		-webkit-transform: rotate(0deg) scale(1,1);
 		transform: rotate(0deg) scale(1,1);
 	}
 	50%{
+		-webkit-transform: rotate(180deg) scale(1.4,1.4);
 		transform: rotate(180deg) scale(1.4,1.4);
 	}
 	100%{
+		-webkit-transform: rotate(360deg) scale(1,1);
 		transform: rotate(360deg) scale(1,1);
 	}
 }
@@ -109,6 +121,8 @@ html{
 	opacity: 0.4;
 	animation: zhuan 2.6s linear infinite;
 	transition: opacity transform 1s;
+	-webkit-animation: zhuan 2.6s linear infinite;
+	-webkit-transition: opacity transform 1s;
 }
 
 .box1:hover h1{
@@ -119,17 +133,22 @@ html{
 	left: 2rem;
 	z-index: 11;
 	transition: all 1s;
+	-webkit-transition: all 1s;
 }
 
 .box1:hover .xie{
 	transform: skewY(-9deg);
 	transition: all 1s;
+	-webkit-transform: skewY(-9deg);
+	-webkit-transition: all 1s;
 }
 
 .box1:hover .introduce{
 	transform: scale(1,1);
-	opacity: 1;
 	transition: all 1s;
+	-webkit-transform: scale(1,1);
+	opacity: 1;
+	-webkit-transition: all 1s;
 }
 
 /*-------------------box2-------------------------*/
@@ -154,12 +173,15 @@ html{
 .introduce5{
 	width: 80%;
 	height: 50%;
-	display: -webkit-box;
+	/*display: -webkit-box;
 	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 3;/*超出部分出现省略号失败,省略号的位置在“活动。。。”这里，可以滚动*/
+	-webkit-line-clamp: 7;       超出7行出现省略号*/
     overflow: auto;
+    -ms-overflow-style: none;    /*IE下隐藏滚动条*/
+    /*overflow: -moz-scrollbars-none;  火狐下隐藏滚动条，但不可以滚动*/
+
 }
 
-.introduce5::-webkit-scrollbar{
+.introduce5::-webkit-scrollbar{  /*chrome下隐藏滚动条*/
 	display: none;
 }
